@@ -5,7 +5,7 @@ import os
 archivo_cartelera = 'cartelera_2024.csv'
 app = Flask(__name__)
 cartelera = carga_csv(archivo_cartelera)
-
+diccionario_peliculas = crea_diccionario_peliculas(cartelera)
 
 @app.route("/")
 def index():

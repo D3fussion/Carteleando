@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="/static/css/estilo.css">
     {% block head %}
     <meta charset="UTF-8">
-    <title>Title</title>
     <title>{% block title %}{% endblock %}</title>
     <style> </style>
     {% endblock %}
 </head>
-    <body>
+    <body class="bloque">
         <div>
-            <a href="/">Generos</a>
+            <a href="/" class="liga">Generos</a>
         </div>
         <div>
-            <a href="/anios">Años</a>
+            <a href="/anios" class="liga">Años</a>
         </div>
         <div>
-            <a href="/alfabetico">Alfabetico</a>
+            <a href="/alfabetico" class="liga">Alfabetico</a>
         </div>
         <div>
-            <a href="/generos">Generos</a>
+            <a href="/generos" class="liga">Generos</a>
         </div>
     {% block body %}
     {% endblock %}
