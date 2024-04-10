@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from funciones import carga_csv, peliculas_mas_recientes
+from funciones import carga_csv, peliculas_mas_recientes, crea_diccionario_peliculas
 import os
 
 archivo_cartelera = 'cartelera_2024.csv'
@@ -39,10 +39,13 @@ def anio():
 @app.route("/pelicula/<id>")
 def pelicula(id:str):
     if id in diccionario_peliculas:
-
-    return render_template(
-        "pelicula.html"
-    )
+        pelicula = diccionario_peliculas[id]
+        return render_template(
+            "pelicula.html",
+            movie=pelicula
+        )
+    else:
+        return render_template("no_existe.html")
 
 
 if __name__ == '__main__':

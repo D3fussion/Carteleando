@@ -11,6 +11,18 @@ def carga_csv(nombre_archivo: str) -> list:
     return lista
 
 
+def crea_diccionario_peliculas(lista_peliculas:list) -> dict:
+    """
+    Crea diccionario de peliculas a partir de una lista de peliculas
+    {"id_pelicula" = {diccionario_pelicula}}
+    """
+    d = {}
+    for pelicula in lista_peliculas:
+        k = pelicula["id"]
+        d[k] = pelicula
+    return d
+
+
 def peliculas_mas_recientes(lista_peliculas: list[dict]) -> list:
     """
     Regresa las peliculas de mas reciente estreno
@@ -33,3 +45,5 @@ if __name__ == '__main__':
         for j in i.values():
             print(f"{j} | ", end="")
         print()
+    d = crea_diccionario_peliculas(lista)
+    print(f"Dune 2: {d['Dune2']}")
