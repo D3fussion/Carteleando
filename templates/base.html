@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>{% block title %}{% endblock %}</title>
+    <style> </style>
+    {% endblock %}
+</head>
+    <body>
+        <div>
+            <a href="/">Generos</a>
+        </div>
+        <div>
+            <a href="/anios">Años</a>
+        </div>
+        <div>
+            <a href="/alfabetico">Alfabetico</a>
+        </div>
+        <div>
+            <a href="/generos">Generos</a>
+        </div>
+    {% block body %}
+    {% endblock %}
+    </body>
+    <footer>
+        {% block footer %}
+        <div>CINEMOVIE (C) 2024 Todos los derechos</div>
+        {% endblock %}
+    </footer>
+</html>
