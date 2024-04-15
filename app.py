@@ -41,7 +41,7 @@ def pelicula(id:str):
     if id in diccionario_peliculas:
         pelicula = diccionario_peliculas[id]
         return render_template(
-            "pelicula.html",
+            "movie.html",
             movie=pelicula
         )
     else:

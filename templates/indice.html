@@ -1,0 +1,19 @@
+{%  extends "base.html" %}
+{% block title %}Cartelera de CINEMOVIE{% endblock %}
+{% block head %}
+{{ super }}
+{% endblock %}
+{% block body %}
+<div>
+    <h1>Cartelera de CINEMOVIE</h1>
+    <h2>Las proximas peliculas a ver</h2>
+    {% for pelicula in lista %}
+    <div>
+        <a href="/pelicula/{{ pelicula['id'] }}">
+            <img src="{{ pelicula['url_poster'] }}" width="150" alt="">
+            {{ pelicula['titulo'] }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
